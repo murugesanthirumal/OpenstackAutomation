@@ -1,0 +1,18 @@
+---
+- name: Openstack Launch VM
+  hosts: localhost
+
+  tasks:
+  - name: Create a new instance and attaches to a network and passes metadata to the instance
+    os_server:
+       state: present
+       name: vm1
+       image: "CentOS-7"
+       key_name: K1
+       timeout: 200
+       flavor: 6ad30ea4-cfbf-43e5-8d02-d2a90aad0c30
+       auto_ip: no
+       network: 2d03b750-3f37-452e-90f4-b53f367d7a6a
+       security_groups: default
+       meta:
+         os: CentOS7
