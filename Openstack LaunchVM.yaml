@@ -14,5 +14,6 @@
        auto_ip: no
        network: 2d03b750-3f37-452e-90f4-b53f367d7a6a
        security_groups: default
+       boot_from_volume: no
        meta:
          os: CentOS7
